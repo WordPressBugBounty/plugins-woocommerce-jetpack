@@ -1,111 +1,144 @@
-=== Booster for WooCommerce ===
+=== Booster for WooCommerce – PDF Invoices, Bulk Price Editor, Currency Switcher & 100+ Tools ===
 Contributors: pluggabl
-Tags: woocommerce customization, woocommerce bundle, woocommerce product addon, woocommerce integration, ecommerce plugin
+Donate link: https://booster.io/
+Tags: woocommerce, woocommerce pdf invoices, woocommerce multi currency, woocommerce dynamic pricing, woocommerce checkout fields, woocommerce product addons, woocommerce bulk price editor, woocommerce variation swatches, woocommerce product feed
 Requires at least: 5.8
 Tested up to: 6.8.1
 Requires PHP: 7.2
-Stable tag: 7.2.6
+Stable tag: 7.2.7
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-One plugin to replace them all. Upgrade your WooCommerce site with 110+ features for ultimate customization. Supercharge functionality, boost sales.
+PDF Invoices, Dynamic Pricing, Multi‑Currency, Checkout Editor, Product Addons & 100+ tools to supercharge WooCommerce. All‑in‑one, zero bloat.
 
 == Description ==
 
-**The only WooCommerce bundle you’ll ever need.**
-Replace all those WooCommerce plugins with one single plugin that does the job of them all, and then some! Booster combines everything you need to fully customize your site's functionality into a single WooCommerce bundle, with 110 features and counting. With zero coding needed and easy setup options, Booster makes customization simple for everyone. 
+Supercharge WooCommerce with powerful <strong>PDF Invoices</strong>, smart <strong>Dynamic Pricing</strong>, global <strong>Multi-Currency</strong> support, a flexible <strong>Checkout Field Editor</strong>, versatile <strong>Product Addons</strong>, and over 100+ more essential tools – all in one plugin! Booster offers a comprehensive suite, replacing dozens of individual extensions without the bloat. Activate only the modules you need, keeping your store fast, lean, and feature-rich. Many core features are completely free.
 
-Discover why <strong>100,000+ websites</strong> rely on Booster to expand the possibilities of your website. Increase your sales with a multitude of features with the <strong>#1 all-in-one WooCommerce plugin</strong>. Stop relying on multiple WordPress product plugins today!
+Trusted by more than <strong>100,000 WooCommerce stores worldwide</strong> — including <strong>40,000+ active installations</strong> of the free version on WordPress.org and <strong>tens of thousands of Booster Pro customers</strong>Booster for WooCommerce is the <strong>#1 all‑in‑one toolkit</strong> for your store. Need branded PDF invoices that rival standalone solutions? Automatic multi‑currency with live FX? Advanced dynamic pricing rules and discounts? Or a drag‑and‑drop checkout‑field editor? Booster empowers you with single-click activation for each powerful, speed-optimized module.
 
-**100+ WooCommerce addons in one single package.**
-Multiple WordPress WooCommerce plugins are a thing of the past! Boost the functionality of your Woocommerce website with just one plugin. Here’s what you get with Booster:
+== Why Store‑Owners & Agencies Choose Booster's Free & Pro Versions ==
+*   <strong>Comprehensive Toolkit:</strong> One install gives access to 110+ features – stop stacking $79 add‑ons. Many core tools available for free!
+*   <strong>Zero Coding Needed:</strong> Clean UI, granular toggles, ready in minutes for everyone.
+*   <strong>Modular & Performant:</strong> Disabled modules never load, ensuring your site stays fast. (We encourage you to check out performance benchmarks on Booster.io!)
+*   <strong>Reliable & Supported:</strong> Regular updates & < 24 hr <a href="https://wordpress.org/support/plugin/woocommerce-jetpack/">WordPress.org support forum</a> replies.
 
-**Maximum Features:** Add customized functionality to your WooCommerce business quickly with more than one hundred modules. Create a seamless customer experience on the front end and equip yourself with robust admin and reporting tools on the backend.
+== Key Free Features You Can Use Today ==
 
-**Zero Coding:** Booster is for everyone. It’s easy to set up and entirely flexible for maximum customization with just a few clicks. No coding required.
+Unlock a wealth of functionality for your WooCommerce store with Booster's powerful free modules. Here are some of the core solutions you can implement immediately:
 
-**Maximum Savings:** Save time and money by installing one plugin that will customize your website like no other. Increase your sales with a host of additional features for the perfect shopping experience.
+=== Professional PDF Invoicing & Packing Slips (Free Core Functionality) ===
+Automatically generate and attach customizable PDF invoices and packing slips to WooCommerce emails. Our free tools provide robust options for customization to match your brand, as powerful as many dedicated PDF invoice plugins!
+<em>Pro Tip: Upgrade to Booster Pro for proforma invoices, credit notes, and more advanced templating.</em>
+Learn more: <a href="https://booster.io/woocommerce-pdf-invoicing-and-packing-slips/">PDF Invoicing & Packing Slips</a>
 
-**Zero Bloat:** Booster has a modular architecture, so you can enable only what you need. With just one plugin, you’re automatically boosting your website speed.
+=== Advanced Prices and Currencies (Free Foundational Tools) ===
+Attract a global audience by displaying prices in different currencies with our basic multi-currency display. Set up site-wide global discounts and manage product price labels effectively. Need a bulk price editor? Booster has you covered.
+<em>Pro Tip: Booster Pro unlocks unlimited currencies, automatic exchange rate updates, and dynamic pricing by user role or country.</em>
+Learn more: <a href="https://booster.io/category/features/prices-currencies/">Prices and Currencies</a>
 
-**Key Features of Booster for WooCommerce**
-<ul>
-<li><a href="https://booster.io/woocommerce-pdf-invoicing-and-packing-slips/"><strong>PDF Invoicing and Packing slips:</strong></a> Streamline WooCommerce orders and paperwork by adding professional WooCommerce PDF invoices and offline packing docs. </li>
-<li><a href="https://booster.io/features/woocommerce-product-input-fields/"><strong>Product Input fields:</strong></a> Add additional custom input fields on all products or per product and allow customers to add more information for the perfect custom product. If you’re selling customized products, this is a must! </li>
-<li><a href="https://booster.io/category/features/prices-currencies/"><strong>Prices and Currencies:</strong></a> Attract international customers to your site by displaying their currency with automatic exchange rates.  Define price rules with WooCommerce Dynamic Pricing and offer global discounts. </li>
-<li><a href="https://booster.io/category/features/cart-checkout/"><strong>Cart and Checkout:</strong></a> Customize the shopping cart and checkout experience for your customers. Create and add custom fields, coupons, additional fees, buttons, and more. Customize the checkout experience with WooCommerce custom fields, like VAT for EU countries, coupon codes, and checkout fees. Reduce cart abandonment with WooCommerce One Page Checkout.</li> 
-<li><a href="https://booster.io/features/woocommerce-product-addons/"><strong>Product Addons:</strong></a> Use the WooCommerce Product Addons module to customize any product, such as setting product labels and prices for each addon or creating automatic discounts. Addons can be added globally or per product.</li> 
-<li><a href="https://booster.io/features/woocommerce-free-price-labels/" ><strong>Button and Price labels:</strong></a> Change price labels and create custom buttons of your choice. Add customized buttons and price labels to your products. The WooCommerce Free Price Labels module lets you set automatic prices for products with an empty price field.</li> 
-<li><a href="https://booster.io/category/features/payment-gateways/"><strong>Payment gateways:</strong></a> Set up custom WooCommerce payment gateways based on currency, shipping method, or location. Set up a multi-currency converter, and add min/max amounts for payment gateways to show up.</li> 
-<li><a href="https://booster.io/category/features/emails-misc/"><strong>Emails, reporting, and Administrative tools:</strong></a> Add custom emails, additional recipients, and basic WPML support. Generate various reports (sales, customers, etc.), track users, and include verification for increased security.Key Features of Booster for WooCommerce.</li>
-</ul>
+=== Customizable Cart and Checkout (Free Essentials) ===
+Enhance the shopping cart and checkout experience. Add crucial custom checkout fields (e.g., for EU VAT numbers), manage basic additional fees, add custom buttons, and tailor the checkout flow with our free checkout field editor options to improve conversions.
+<em>Pro Tip: Get advanced conditional logic for checkout fields, file uploads, and more with Booster Pro.</em>
+Learn more: <a href="https://booster.io/category/features/cart-checkout/">Cart and Checkout Customization</a>
 
-**Need more? Check out paid Booster bundles**
-paid Booster bundles are paid upgrade of Booster that unlocks more functionalities. Boost your business with all the best WooCommerce features and get access to additional administrative tools and reports.
+=== Product Input Fields & Addons (Free Basic Options) ===
+Add essential custom input fields to your products, either globally or per-product. Offer simple product customizations with basic product addons. Allow customers to provide more information for personalized items.
+<em>Pro Tip: Booster Pro offers more addon types, conditional logic, and advanced input field options.</em>
+Learn more: <a href="https://booster.io/features/woocommerce-product-input-fields/">Product Input Fields</a> & <a href="https://booster.io/features/woocommerce-product-addons/">Product Addons</a>
 
-* *PDF Invoicing and Packing:* Create proforma invoices, credit notes, and packing slips
-* *Cart and Checkout:* Add multiple custom fields, custom info blocks, check out file uploads.
-* *Prices and Currencies:* Add an unlimited number of currencies to WooCommerce.
-* *Add to Cart:* Customize add to cart messages, button labels with multiple category groups allowed.
-* *Empty Cart:* Customize empty cart button text, different button positions on your cart page, and more.
-* *Mini Cart:* Add more custom information options.
-* *Export options:* Enable additional fields.
-* *Configuration options:* Include additional payments and shipping options.
+=== Product Variation Swatches (Basic Free Option) ===
+Offer a more visual way for customers to select product variations. Our free module provides basic button swatches for product attributes, a step up from standard WooCommerce dropdowns.
+<em>Pro Tip: For image swatches, color swatches, and advanced swatch customization, consider Booster Pro or dedicated swatch plugins if your needs are highly specific.</em>
+Learn more: <a href="https://booster.io/features/woocommerce-product-variation-swatches/">Product Variation Swatches</a> & <a href="https://booster.io/features/woocommerce-product-variation-swatches/">Product Variation Swatches</a>
 
-Paid Booster bundles have all of these additional features and more. Discover what Booster has to offer now:
-<a href="https://booster.io/booster-woocommerce-free-vs-plus/"><strong>Compare Booster Free and paid Booster bundles</strong></a>
+=== Custom Button and Price Labels (Free) ===
+Take control over your store's calls to action and pricing display. Change default price labels and create custom buttons. The included WooCommerce Free Price Labels module lets you easily set custom labels for products without a price.
+Learn more: <a href="https://booster.io/features/woocommerce-free-price-labels/">Custom Button and Price Labels</a>
 
-Paid Booster bundles comes with a 30-day no-questions-asked money-back guarantee. If you’re not completely satisfied, we will give you 100% of your money back!
-<a href="https://booster.io/buy-booster/"><strong>Upgrade Now</strong></a>
+=== Payment Gateways (Free Basic Setup) ===
+Our foundational gateway tools allow you to set up basic custom WooCommerce payment gateways. Define visibility based on currency, shipping method, or location, and set minimum/maximum cart totals for gateways to appear.
+Learn more: <a href="https://booster.io/category/features/payment-gateways/">Payment Gateways</a>
+
+=== Emails, Reporting & Admin Tools (Free Core Utilities) ===
+Improve your store administration with essential tools. Add custom emails and additional recipients for WooCommerce notifications. Generate basic sales and customer reports, and utilize user tracking features. Basic WPML support is also included for multilingual sites.
+Learn more: <a href="https://booster.io/category/features/emails-misc/">Emails, Reporting & Admin Tools</a>
+
+== Why Upgrade to Booster Pro? ==
+While the free version of Booster provides a massive toolkit, <strong>Booster Pro</strong> unlocks the full potential of your WooCommerce store, helping you increase sales, improve customer experience, and streamline operations.
+
+*   <strong>Unlock All 110+ Pro Features:</strong> Get advanced functionalities like unlimited currencies with auto-exchange rates, powerful conditional logic for checkout fields, proforma invoices, credit notes, automated PayPal tracking sync, and much more.
+*   <strong>Save Money:</strong> Replace 5-10+ individual premium plugins (each costing $49-$99+) with one comprehensive, affordable solution.
+*   <strong>Premium Support:</strong> Get faster, dedicated support from our expert team.
+*   <strong>Peace of Mind:</strong> One trusted, well-maintained plugin reduces compatibility issues and simplifies updates.
+
+<a href="https://booster.io/booster-woocommerce-free-vs-plus/"><strong>Compare Booster Free vs. Pro Features Detailed Table</strong></a>
+
+Booster Pro comes with a 30-day no-questions-asked money-back guarantee. If you’re not completely satisfied, we will give you 100% of your money back!
+<a href="https://booster.io/buy-booster/"><strong>Upgrade to Booster Pro Now & Grow Your Store!</strong></a>
 
 == Screenshots ==
 
-1. Booster for WooCommerce - Dashboard.
-2. Booster for WooCommerce - Prices & Currencies.
-3. Booster for WooCommerce - Button & Price Labels.
-4. Booster for WooCommerce - Products.
-5. Booster for WooCommerce - Cart & Checkout.
-6. Booster for WooCommerce - Payment Gateways.
-7. Booster for WooCommerce - Shipping & Orders.
-8. Booster for WooCommerce - PDF Invoicing & Packing Slips.
-9. Booster for WooCommerce - Emails & Misc.
+1. Booster for WooCommerce - PDF Invoice Example.
+2. Booster for WooCommerce - Currency Switcher in Action.
+3. Booster for WooCommerce - Bulk Price Editor Interface.
+4. Booster for WooCommerce - Checkout Field Editor.
+5. Booster for WooCommerce - Dynamic Pricing Rule Setup.
+6. Booster for WooCommerce - Dashboard Overview.
+7. Booster for WooCommerce - Product Addons Example.
+8. Booster for WooCommerce - Payment Gateway Configuration.
+9. Booster for WooCommerce - Shipping Options.
 
 == Frequently Asked Questions ==
 
 = How to install Booster for WooCommerce (free version)? =
-
-The easiest way to install Booster is via your site’s Dashboard. Please follow these instructions to install and connect Booster:
-
-Log in to your site’s Dashboard (e.g. http://www.yourdomain.com/wp-admin)
-
-Click on the “Plugins” tab in the left panel, then click “Add New”.
-Search for “Booster for WooCommerce” and the latest version will appear at the top of the list of results.
-Install it by clicking the “Install Now” link.
-When installation finishes, click “Activate Plugin”.
-You’re done!
+The easiest way to install Booster is via your site’s Dashboard. Please follow these instructions:
+1. Log in to your site’s Dashboard (e.g. www.yourdomain.com/wp-admin).
+2. Click on the “Plugins” tab in the left panel, then click “Add New”.
+3. Search for “Booster for WooCommerce”.
+4. Install it by clicking the “Install Now” link.
+5. When installation finishes, click “Activate Plugin”.
+You’re done! Explore the modules at WooCommerce > Booster Settings.
 
 = Do I need any coding skills to use Booster? =
+Absolutely not! You can configure everything Booster has to offer without any coding knowledge. Our interface is designed to be user-friendly, with clear options and toggles for each of the 110+ modules.
 
-Absolutely not! You can configure everything Booster has to offer without any coding knowledge.
+= What makes Booster the best all-in-one WooCommerce plugin? =
+Booster for WooCommerce is the most comprehensive WooCommerce enhancement toolkit, combining <strong>110+ powerful modules</strong> that often replace the need for multiple, expensive standalone plugins. Our all-in-one solution provides essential tools to <strong>boost sales and streamline operations</strong>, from professional <strong>PDF invoices</strong> and <strong>multi-currency support</strong> to flexible <strong>dynamic pricing</strong> and <strong>checkout field customization</strong>.
 
-= What’s the difference between Booster and Paid Booster bundles? =
+= How does this WooCommerce toolkit enhance my store's functionality? =
+Our WooCommerce <strong>toolkit (Booster)</strong> adds advanced capabilities like <strong>global multi-currency selling</strong>, sophisticated <strong>dynamic pricing rules</strong>, streamlined <strong>checkout optimization</strong>, automated <strong>PDF invoicing</strong>, and versatile <strong>product addons</strong>. All these features are integrated into a single, performance-optimized plugin, allowing you to <strong>enhance your store without bloat</strong> and potentially replace 10+ individual plugins with one comprehensive solution.
 
-The free version of Booster for WooCommerce offers 68 amazing features.  But, if you’re looking for greater functionality and even more customization options – Booster Plus is the ultimate WooCommerce product bundle for you. Booster Plus is packed with 196 features and counting. 
+= Is Booster bloated or will it slow down my site (even with 110+ modules)? =
+No! Performance is a top priority for Booster. Our plugin is highly <strong>modular</strong>, meaning <strong>only the code for the modules you activate is loaded</strong>. Disabled modules have zero impact on your site's speed. We continuously optimize our code to ensure Booster runs efficiently, allowing you to add powerful features like PDF invoices or dynamic pricing without sacrificing performance. We have performance benchmarks available on Booster.io.
 
-Check out our [feature comparison](https://booster.io/booster-woocommerce-free-vs-plus/) and decide which version is best for you.
+= Is Booster for WooCommerce easy to use, even with so many features? =
+Absolutely! Booster is designed with a user-friendly interface. Each of the 110+ modules can be enabled or disabled with a single click, and settings are clearly organized within each module. You only interact with the features you choose to use, making it easy to manage without feeling overwhelmed.
 
-= Why should I choose paid Booster bundles over other plugins? =
+= What if I only need one or two features from Booster, like PDF Invoices or a Price Editor? Is it still worth installing? =
+Yes, definitely! Because Booster is modular, you can activate only the specific features you need (e.g., just <strong>PDF Invoices</strong> or the <strong>Bulk Price Editor</strong>). The other 100+ modules will not load any code or impact your site's performance. This way, you get the exact functionality you require without any unnecessary overhead, and you have the option to explore other features like <strong>currency switching</strong> or <strong>product addons</strong> later if your needs grow.
 
-Implementing just a few modules from the Booster paid Booster bundles suite is more cost-effective than using multiple individual plugins, often priced at $79-$99 each. Stacking your WooCommerce site with a lot of different plugins can slow it down too. All those individual plugins may not necessarily be compatible with one another.
-paid Booster bundles solves all of these problems with over 100 compatible modules in a single package for easy WooCommerce integration. You get multiple custom features for the cost of one WordPress product plugin and the benefit of zero bloat.
+= Can Booster replace my current PDF invoice plugin / currency switcher plugin / checkout field editor / etc.? =
+In many cases, yes! Booster's free core modules for features like <strong>PDF Invoicing</strong>, <strong>Currency Switching</strong>, and <strong>Checkout Field Editing</strong> are very robust and often provide comparable or even more functionality than many standalone free plugins. For advanced needs, <strong>Booster Pro</strong> frequently offers more comprehensive features than specialized premium plugins, all at a fraction of the total cost. We recommend trying the free module first and checking our feature comparison for Pro capabilities.
 
-= Do you offer refunds? =
+= Is Booster compatible with the latest WooCommerce, WordPress, and features like HPOS? =
+Yes, Booster is <strong>regularly updated and fully compatible</strong> with the latest WordPress and WooCommerce versions. This includes seamless integration with modern WooCommerce architecture like <strong>High-Performance Order Storage (HPOS)</strong> for improved scalability, as well as <strong>WooCommerce Blocks</strong>, ensuring our toolkit stays current and performs optimally with all platform advancements.
 
-If you are not completely satisfied with paid Booster bundles, you can request a refund within the first 30 days, and we will give you 100% of your money back – no questions asked.
+= What’s the difference between Booster Free and Booster Pro? =
+The free version of Booster for WooCommerce offers a wealth of core functionalities across 110+ modules, perfect for getting started and enhancing your store. <strong>Booster Pro</strong> unlocks advanced features within these modules (like unlimited currencies, proforma invoices, advanced conditional logic for checkout fields), offers premium support, and provides a more comprehensive toolkit for serious store owners looking to maximize sales and efficiency.
+Check out our detailed <a href="https://booster.io/booster-woocommerce-free-vs-plus/">feature comparison</a> to see which version is best for you.
 
-= How to unlock those some features settings that are locked? =
+= Why should I choose Booster Pro over other individual premium plugins? =
+Implementing just a few premium modules from the Booster Pro suite is typically more <strong>cost-effective</strong> than buying multiple individual plugins (often priced at $49-$99 each). Stacking your WooCommerce site with many different plugins can also lead to slower performance and compatibility conflicts. <strong>Booster Pro</strong> solves these problems with over 110 compatible modules in a single, optimized package, simplifying your plugin management and saving you money.
 
-To unlock all Booster for WooCommerce features, please install additional paid Booster bundles(https://booster.io/buy-booster/) plugin.
+= Do you offer refunds for Booster Pro? =
+Yes! We offer a <strong>30-day no-questions-asked money-back guarantee</strong> for Booster Pro. If you are not completely satisfied with your purchase, you can request a refund within the first 30 days, and we will give you 100% of your money back.
+
+= How do I unlock features that are marked as Pro? =
+To unlock all Booster for WooCommerce Pro features, please <a href="https://booster.io/buy-booster/">purchase and install the Booster Pro plugin</a> from our website. Once activated, the Pro features will be available within the existing module settings.
+
+= Where can I find documentation for a specific module, like PDF Invoicing or Dynamic Pricing? =
+You can find links to documentation for each module within the Booster settings dashboard in your WordPress admin (WooCommerce > Booster Settings). Each module typically has a "Module Documentation" link. You can also visit our main documentation hub at <a href="https://booster.io/docs/">booster.io/docs/</a> for comprehensive guides on all features, including <strong>PDF Invoicing</strong>, <strong>Dynamic Pricing</strong>, <strong>Multi-Currency</strong>, and more.
 
 == Detailed List of Features ==
 
@@ -245,6 +278,12 @@ To unlock all Booster for WooCommerce features, please install additional paid B
 * For support please visit the [Plugin Support Forum](https://wordpress.org/support/plugin/woocommerce-jetpack/).
 
 == Changelog ==
+
+= 7.2.7 18/06/2025 =
+
+* NEW FEATURE - CART & CHECKOUT - Cart Abandonment - Added cart Abandonment option to Recover lost sales by automatically tracking and emailing customers who abandon their cart before checkout.
+* WooCommerce 9.9.4 Tested
+* WordPress 6.8.1 Tested
 
 = 7.2.6 12/05/2025 =
 
