@@ -1,11 +1,11 @@
 === Booster for WooCommerce – PDF Invoices, Abandoned Cart, Variation Swatches & 100+ Tools ===
-Contributors: pluggabl
+Contributors: pluggabl, ronyp, gravid7
 Donate link: https://booster.io/
 Tags: woocommerce, abandoned cart, cart recovery, swatches, woocommerce pdf invoices, variation swatches, woocommerce multi currency, woocommerce dynamic pricing, woocommerce checkout fields, woocommerce product addons, woocommerce product feed, currency switcher
 Requires at least: 5.8
-Tested up to: 6.8.1
+Tested up to: 6.8.2
 Requires PHP: 7.2
-Stable tag: 7.2.8
+Stable tag: 7.2.9
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -92,7 +92,8 @@ While the free version of Booster provides a massive toolkit, **Booster Elite** 
 7. Booster for WooCommerce - Product Addons Example.
 8. Booster for WooCommerce - Payment Gateway Configuration.
 9. Booster for WooCommerce - Shipping Options.
-10. Booster for WooCommerce - Product Variation Swatches.
+10. Booster for WooCommerce - Cart Abandonment.
+11. Booster for WooCommerce - Product Variation Swatches.
 
 == Frequently Asked Questions ==
 
@@ -128,7 +129,7 @@ Absolutely! Booster is designed with a user-friendly interface. Each of the 110+
 Yes, definitely! Because Booster is modular, you can activate only the specific features you need (e.g., just <strong>PDF Invoices</strong> or the <strong>Bulk Price Editor</strong>). The other 100+ modules will not load any code or impact your site's performance. This way, you get the exact functionality you require without any unnecessary overhead, and you have the option to explore other features like <strong>currency switching</strong> or <strong>product addons</strong> later if your needs grow.
 
 = Can Booster replace my current PDF invoice plugin / currency switcher plugin / checkout field editor / etc.? =
-In many cases, yes! Booster's free core modules for features like <strong>PDF Invoicing</strong>, <strong>Currency Switching</strong>, and <strong>Checkout Field Editing</strong> are very robust and often provide comparable or even more functionality than many standalone free plugins. For advanced needs, <strong>Booster Elite</strong> frequently offers more comprehensive features than specialized premium plugins, all at a fraction of the total cost. We recommend trying the free module first and checking our feature comparison for Pro capabilities.
+In many cases, yes! Booster's free core modules for features like <strong>PDF Invoicing</strong>, <strong>Currency Switching</strong>, and <strong>Checkout Field Editing</strong> are very robust and often provide comparable or even more functionality than many standalone free plugins. For advanced needs, <strong>Booster Elite</strong> frequently offers more comprehensive features than specialized premium plugins, all at a fraction of the total cost. We recommend trying the free module first and checking our feature comparison for Elite capabilities.
 
 = Is Booster compatible with the latest WooCommerce, WordPress, and features like HPOS? =
 Yes, Booster is <strong>regularly updated and fully compatible</strong> with the latest WordPress and WooCommerce versions. This includes seamless integration with modern WooCommerce architecture like <strong>High-Performance Order Storage (HPOS)</strong> for improved scalability, as well as <strong>WooCommerce Blocks</strong>, ensuring our toolkit stays current and performs optimally with all platform advancements.
@@ -284,15 +285,21 @@ You can find links to documentation for each module within the Booster settings 
 
 == Changelog ==
 
+= 7.2.9 - 30/07/2025 =
+
+* ENHANCEMENT - Updated and unified all in-plugin "Upgrade to Elite" links for a clearer and more informative user experience.
+* WooCommerce 10.0.4 Tested
+* WordPress 6.8.2 Tested
+
 = 7.2.8 16/07/2025 =
 
-* ADDED - PRODUCTS - Product Variation Swatches Lite - New free module for basic color/image variation swatches for limited attributes.
+* NEW FEATURE - PRODUCTS - Product Variation Swatches Lite - New free module for basic color/image variation swatches for limited attributes.
 * WooCommerce 10.0.2 Tested
 * WordPress 6.8.1 Tested
 
 = 7.2.7 18/06/2025 =
 
-* NEW FEATURE - CART & CHECKOUT - Cart Abandonment - Added cart Abandonment option to Recover lost sales by automatically tracking and emailing customers who abandon their cart before checkout.
+* NEW FEATURE - "Abandoned Cart Lite" - New free module to track abandoned carts and send a single automated recovery email.
 * WooCommerce 9.9.4 Tested
 * WordPress 6.8.1 Tested
 
