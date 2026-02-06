@@ -1,6 +1,7 @@
 {
-    "0" : "= 7.3.1 25/09/2025 =",
-    "1" : "* NEW – Sales Notifications (Lite): Displays simple “recent purchase” popups from confirmed orders with a fixed template and two positions. Advanced text, images, multiple statuses, styling, sounds, device rules, and full timing are Elite.",
-    "2" : "* NEW – Pre-Orders (Lite): Enables basic pre-orders on up to 3 products (default 1) with fixed button text and a standard message. Mixed-cart control, deposits/fees, special shipping, dedicated emails, role/category rules, dates, and UI customization are Elite.",
-    "3" : "* ENHANCEMENT – Settings UX: Clear “Lite/Elite” labels and cleaner descriptions across modules. Small accessibility improvements for better navigation."
+    "0": "= 7.11.1 28/01/2026 =",
+    "1": "* **One-Click Presets & Onboarding**. Added one-click presets for PDF Invoicing, Multicurrency, Product Addons, and Checkout, along with a new Getting Started Hub and smart module filters.",
+    "2": "* **Bug Fixes & Performance Improvements**. Fixed Multicurrency price filter PHP errors, resolved memory issues with 100+ variations, and optimized admin asset loading.",
+    "3": "* WooCommerce 10.4.3 Tested",
+    "4": "* WordPress 6.9 Tested"
 }

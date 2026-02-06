@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce - Core - Admin
  *
- * @version 7.3.1
+ * @version 7.8.0
  * @since   3.2.4
  * @author  Pluggabl LLC.
  * @package Booster_For_WooCommerce/core
@@ -49,13 +49,29 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 		/**
 		 * Constructor.
 		 *
-		 * @version 7.2.5
+		 * @version 7.3.2
 		 * @since   3.2.4
 		 */
 		public function __construct() {
 
 			$this->cats                     = include WCJ_FREE_PLUGIN_PATH . '/includes/admin/wcj-modules-cats.php';
 			$this->custom_dashboard_modules = apply_filters( 'wcj_custom_dashboard_modules', array() );
+
+			if ( 'woocommerce-jetpack.php' === basename( WCJ_FREE_PLUGIN_FILE ) ) {
+				require_once WCJ_FREE_PLUGIN_PATH . '/includes/admin/class-booster-onboarding.php';
+				new Booster_Onboarding();
+			}
+
+			// Load presets system for dashboard quick setup.
+			require_once WCJ_FREE_PLUGIN_PATH . '/includes/presets/class-wcj-presets.php';
+
+			// Load Getting Started hub (P6).
+			require_once WCJ_FREE_PLUGIN_PATH . '/includes/admin/class-wcj-getting-started-hub.php';
+			$GLOBALS['wcj_getting_started_hub'] = new WCJ_Getting_Started_Hub();
+
+			// Load Module Filters (P7).
+			require_once WCJ_FREE_PLUGIN_PATH . '/includes/admin/class-wcj-module-filters.php';
+			$GLOBALS['wcj_module_filters'] = new WCJ_Module_Filters();
 
 			if ( is_admin() ) {
 				add_filter( 'booster_message', 'wcj_get_plus_message', 100, 3 );
@@ -77,6 +93,51 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 				add_filter( 'woocommerce_admin_settings_sanitize_option', array( $this, 'maybe_unclean_field' ), PHP_INT_MAX, 3 );
 				add_action( 'admin_post_wcj_save_module_settings', array( $this, 'wcj_save_module_settings' ) );
 			}
+		}
+
+		/**
+		 * Enhance settings array for a given module with help tooltips.
+		 *
+		 * @version 7.7.0
+		 * @since   1.0.0
+		 * @param array  $settings  Settings array for the module.
+		 * @param string $module_id Module id (without wcj_ prefix).
+		 * @return array Enhanced settings array.
+		 */
+		public function enhance_settings_for_module( $settings, $module_id ) {
+			if ( empty( $module_id ) ) {
+				return $settings;
+			}
+			if ( ! is_array( $settings ) || empty( $settings ) ) {
+				return $settings;
+			}
+
+			foreach ( $settings as $key => $setting ) {
+				if ( ! is_array( $setting ) || empty( $setting['id'] ) ) {
+					continue;
+				}
+
+				if ( 0 !== strpos( $setting['id'], 'wcj_' ) ) {
+					continue;
+				}
+
+				$help_text      = isset( $setting['help_text'] ) ? $setting['help_text'] : '';
+				$friendly_label = isset( $setting['friendly_label'] ) ? $setting['friendly_label'] : '';
+
+				if ( ! empty( $friendly_label ) && isset( $setting['title'] ) ) {
+					$settings[ $key ]['title'] = $friendly_label;
+				}
+
+				if ( ! empty( $help_text ) ) {
+					if ( ! empty( $setting['desc_tip'] ) ) {
+						$settings[ $key ]['desc_tip'] = $setting['desc_tip'] . ' ' . $help_text;
+					} else {
+						$settings[ $key ]['desc_tip'] = $help_text;
+					}
+				}
+			}
+
+			return $settings;
 		}
 
 		/**
@@ -320,6 +381,17 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 			}
 			return $footer_text;
 		}
+
+		/**
+		 * Getting Started page
+		 */
+		public function wcj_getting_started_page() {
+			if ( class_exists( 'Booster_Onboarding' ) ) {
+				$onboarding = new Booster_Onboarding();
+				$onboarding->getting_started_page();
+			}
+		}
+
 		/**
 		 * Add menu item
 		 *
@@ -768,7 +840,13 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 					}
 				}
 
-				$total_modules++;
+				++$total_modules;
+
+				// Get data attributes for module filters (P7).
+				$module_data_attrs = '';
+				if ( isset( $GLOBALS['wcj_module_filters'] ) ) {
+					$module_data_attrs = $GLOBALS['wcj_module_filters']->get_module_data_attributes( $section );
+				}
 
 				if ( in_array( $the_feature['id'], array( 'wcj_cart_abandonment_enabled', 'wcj_wishlist_enabled' ), true ) ) {
 					$lite_tooltip_text = __( 'Want more? Elite unlocks automation & unlimited items.', 'woocommerce-jetpack' );
@@ -778,7 +856,7 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 				}
 
 				if ( 'pdf_invoicing' !== $cat_id ) {
-					$html .= '<div class="wcj-plugins-sing-acc-box-head">
+					$html .= '<div class="wcj-plugins-sing-acc-box-head"' . $module_data_attrs . '>
 						<div class="wcj-plugins-sing-head-lf">
 							<span class="wcj_admin_span">
 								<img src="' . esc_url( wcj_plugin_url() ) . '/assets/images/pr-sm-icn.png" alt="">
@@ -824,7 +902,7 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 						continue;
 					}
 
-					$total_modules++;
+					++$total_modules;
 					$url      = admin_url( 'admin.php?page=wcj-plugins&wcj-cat=' . sanitize_title( $cat_id ) . '&wcj-cat-nonce=' . wp_create_nonce( 'wcj-cat-nonce' ) . '&section=' . $id );
 					$sub_desc = __( 'PDF Invoicing', 'woocommerce-jetpack' ) . ': ' . $label . ' ' . __( 'Settings', 'woocommerce-jetpack' );
 					$html    .= '
@@ -860,12 +938,20 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 		/**
 		 * Output_settings.
 		 *
-		 * @version 7.1.8
+		 * @version 7.8.0
 		 * @param   array $current_section defines the current section.
 		 */
 		public function output_settings( $current_section = '' ) {
 
-			$settings          = $this->get_settings( $current_section );
+			$settings = $this->get_settings( $current_section );
+
+			if ( ! $this->is_dashboard_section( $current_section ) ) {
+				// Quick Start Box Rendering (Before module settings).
+				if ( function_exists( 'wcj_quick_start_render_box' ) ) {
+					wcj_quick_start_render_box( $current_section );
+				}
+				$settings = $this->enhance_settings_for_module( $settings, $current_section );
+			}
 			$final_html        = '';
 			$tab_ids_key       = '';
 			$active_tab        = '';
@@ -911,6 +997,7 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 					$checked          = ( 'yes' === $option_value ) ? 'checked' : '';
 					$custom_link_link = isset( $setting['link'] ) ? $setting['link'] : '';
 					$desc_tip_str     = isset( $setting['desc_tip'] ) ? $setting['desc_tip'] : '';
+					$help_text_str    = isset( $setting['help_text'] ) ? $setting['help_text'] : '';
 
 					if ( '' !== $desc_tip_str ) {
 						$desc_tip = isset( $setting['desc_tip'] ) && '' !== $setting['desc_tip'] ? "<div class='wcj_help_tooltip_main'><div class='wcj_help_tooltip'><p class=''>" . $setting['desc_tip'] . '</p></div></div>' : '';
@@ -1020,6 +1107,7 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 							$final_html .= '<div class="wcj-tab-plugins-form-inp">
                                 <div class="wcj-plugins-form-inp-lf">
                                     <div class="wcj_help_tooltip_label"><label for="' . $id . '"> ' . $title . '</label></div>
+									' . $desc_tip . '
                                 </div>
                                 <div class="wcj-plugins-form-inp-rh">
                                     <label for="' . $id . '">
@@ -1174,14 +1262,13 @@ if ( ! class_exists( 'WCJ_Admin' ) ) :
 								foreach ( $setting['custom_attributes'] as $attribute => $attribute_value ) {
 									$custom_attributes[] = esc_attr( $attribute ) . '="' . esc_attr( $attribute_value ) . '"';
 								}
-							} else {
-								if ( ! w_c_j()->all_modules['currency_exchange_rates']->is_enabled()
+							} elseif ( ! w_c_j()->all_modules['currency_exchange_rates']->is_enabled()
 								|| 'yes' !== wcj_get_option( 'wcj_currency_exchange_rates_point_decimal_separator', 'no' )
 								) {
+
 									$custom_attributes = array( 'step="' . sprintf( '%.12f', 1 / pow( 10, 12 ) ) . '"', 'min="0"' );
-								} else {
-									$custom_attributes = array( 'step="0.00000001"', 'min="0"' );
-								}
+							} else {
+								$custom_attributes = array( 'step="0.00000001"', 'min="0"' );
 							}
 							$custom_attributes_button = array();
 							if ( ! empty( $setting['custom_attributes_button'] ) && is_array( $setting['custom_attributes_button'] ) ) {

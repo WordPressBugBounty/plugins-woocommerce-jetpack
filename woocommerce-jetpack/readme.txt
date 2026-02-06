@@ -3,9 +3,9 @@ Contributors: pluggabl, ronyp, gravid7
 Donate link: https://booster.io/
 Tags: woocommerce, abandoned cart, cart recovery, swatches, woocommerce pdf invoices, variation swatches, woocommerce multi currency, woocommerce dynamic pricing, woocommerce checkout fields, woocommerce product addons, woocommerce product feed, currency switcher
 Requires at least: 5.8
-Tested up to: 6.8.2
+Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 7.3.1
+Stable tag: 7.11.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,6 +22,34 @@ Trusted by more than **100,000 WooCommerce stores worldwide** — including **40
 * **Zero Coding Needed:** Clean UI, granular toggles, ready in minutes for everyone.
 * **Modular & Performant:** Disabled modules never load, ensuring your site stays fast. (We encourage you to check out performance benchmarks on Booster.io!)
 * **Reliable & Supported:** Regular updates & < 24 hr WordPress.org support forum replies.
+
+### New in 7.4.0 – Guided onboarding for faster wins
+
+Spin up common store setups in minutes with **4 new one-click goals** (Professional invoices • Boost conversions • Better checkout • Store essentials). A clear **3-step progress bar** guides you, and the **success screen** points you to the next best action—no hunting through settings. It’s fully keyboard accessible and mobile friendly. 
+
+**What the new goals do (free tier):**
+
+* **Professional invoices (starter):** turns on PDF **Invoice** generation (invoice only).
+* **Boost conversions:** enables **Product Add-ons (single)** and **Related Products**.
+* **Better checkout (basics):** enables **Checkout Core Fields** and **More Button Labels**.
+* **Store essentials:** enables **Sequential Order Numbers** and **Product Tabs (single)**.
+
+### New in 7.5.0 – Blueprints: real outcomes, faster
+
+Skip the guesswork. **Blueprints** apply a sensible, free-tier setup in one click, then point you to the next best action:
+
+* **Recover Lost Sales:** turn on Cart Abandonment (Lite: single email) and send a test; suggested next step—add a 10% coupon.
+* **Boost AOV:** enable Product Add-ons (single) and tune Related Products to increase basket size.
+* **Sell Internationally:** prep your store with essentials + checkout basics, then guided steps to add EU/UK shipping, taxes, and payments.
+
+What you’ll notice:
+
+* **Quick Setup ⇄ Blueprints** switcher in onboarding.
+* A clear **Choose → Review → Complete** path with **Next Steps** and **deep-link** buttons.
+* **“Applied”** badges and a dedicated **Undo** that only reverts what was changed.
+* Smoother mobile and keyboard navigation with accessible status announcements.
+
+All changes stay within Free limits; no paid features are toggled.
 
 == Key Free Features You Can Use Today ==
 
@@ -157,6 +185,27 @@ To unlock all Booster Elite features, please <a href="https://booster.io/buy-boo
 
 = Where can I find documentation for a specific module, like PDF Invoicing or Dynamic Pricing? =
 You can find links to documentation for each module within the Booster settings dashboard in your WordPress admin (WooCommerce > Booster Settings). Each module typically has a "Module Documentation" link. You can also visit our main documentation hub at <a href="https://booster.io/docs/">booster.io/docs/</a> for comprehensive guides on all features, including <strong>PDF Invoicing</strong>, <strong>Dynamic Pricing</strong>, <strong>Multi-Currency</strong>, and more.
+
+= Will onboarding overwrite my settings? =
+When you apply a goal, Booster uses safe defaults scoped to that goal. You can review changes first and adjust later from each module’s settings. You can also apply another goal after completion. 
+
+= Can I apply more than one goal? =
+Yes. Use <strong>Pick another goal</strong> on the success screen to stack quick wins.
+
+= Are you tracking my site externally? =
+No. Onboarding logs <strong>basic, local-only</strong> events (e.g., goal applied/undone) to help improve the experience. No external services are called. 
+
+= What’s the difference between a Goal and a Blueprint? =
+Goals enable a small set of features for a quick win. Blueprints bundle goals into an outcome (e.g., Recover Lost Sales) and guide your next steps. 
+
+= Will this overwrite my existing settings? =
+No. Each apply uses safe defaults scoped to the goal/blueprint. You can review changes first and Undo restores only what we changed.
+
+= Can I stack multiple blueprints/goals? =
+Yes. Apply one, then use Pick another to layer more quick wins. 
+
+= Are you sending any data off my site? =
+No. Onboarding analytics are local-only (apply/undo/mode views) to improve the experience. No external services are called.
 
 == Detailed List of Features ==
 
@@ -297,6 +346,125 @@ You can find links to documentation for each module within the Booster settings 
 * For support please visit the [Plugin Support Forum](https://wordpress.org/support/plugin/woocommerce-jetpack/).
 
 == Changelog ==
+
+= 7.11.1 - 28/01/2026 =
+* **New - One-Click Presets**: Set up your store in seconds, not hours. Choose what you want to accomplish and we configure everything for you:
+  - **PDF Invoicing**: Start generating professional invoices immediately
+  - **Multicurrency**: Let customers shop in their local currency
+  - **Product Addons**: Add gift wrapping, engraving, and custom options to products
+  - **Checkout Customization**: Streamline your checkout experience
+* **New - Getting Started Hub**: A friendly welcome panel on your dashboard pointing you to the most popular features
+* **New - Smart Module Filters**: Find modules faster with All, Recommended, Active, and Recently Used filters
+* Fixed - Multicurrency no longer shows PHP error when price filters are empty
+* Fixed - Variable products with 100+ variations no longer cause memory issues with Order Quantities
+* Improved - Better admin performance by only loading onboarding assets on Booster pages
+* include/wcj-free-functions.php file fixed
+* WooCommerce 10.4.3 Tested
+* WordPress 6.9 Tested
+
+= 7.11.0 - 28/01/2026 =
+* **New - One-Click Presets**: Set up your store in seconds, not hours. Choose what you want to accomplish and we configure everything for you:
+  - **PDF Invoicing**: Start generating professional invoices immediately
+  - **Multicurrency**: Let customers shop in their local currency
+  - **Product Addons**: Add gift wrapping, engraving, and custom options to products
+  - **Checkout Customization**: Streamline your checkout experience
+* **New - Getting Started Hub**: A friendly welcome panel on your dashboard pointing you to the most popular features
+* **New - Smart Module Filters**: Find modules faster with All, Recommended, Active, and Recently Used filters
+* Fixed - Multicurrency no longer shows PHP error when price filters are empty
+* Fixed - Variable products with 100+ variations no longer cause memory issues with Order Quantities
+* Improved - Better admin performance by only loading onboarding assets on Booster pages
+* WooCommerce 10.4.3 Tested
+* WordPress 6.9 Tested
+
+= 7.10.0 - 24/12/2025 =
+* Added - Activation redirect to Getting Started page for new installs
+* Added - Search box in onboarding modal for quick goal discovery
+* Added - "Re-open Onboarding" button on Getting Started page
+* Added - First-win celebration message after applying first goal
+* Added - Success toast notification after saving module settings
+* Added - Quick Start presets for PDF Invoicing, Order Numbers, Wishlist, Checkout Fields, Related Products
+* Added - Help text tooltips for 20+ settings across key modules
+* Added - Upgrade comparison blocks for Multicurrency, PDF Invoicing, Product Add-ons, Pre-orders, Sales Notifications
+* Improved - Onboarding modal now only appears on Booster admin pages
+
+= 7.9.0 - 11/12/2025 =
+
+* **Onboarding Phase 7 – Lite → Elite upgrade blocks (Phase 5 EPIC 3)**. Added contextual “Upgrade to Booster Elite” panels inside key Lite modules so you can see exactly what you get if you decide to upgrade.
+  - **Clear Lite vs Elite side-by-side**: Abandoned Cart Lite, Wishlist Lite, and Variation Swatches Lite now show what’s included today and what extra power you unlock with Booster Elite.
+  - **Inline, in-context upsells**: Upgrade blocks live directly on the module settings screens, with short, plain-English benefit lists and links to learn more or go to the pricing page.
+  - **Config-driven and reusable**: A central config now defines copy, benefits, and URLs per module so we can add or adjust upgrade messaging without touching core module logic.
+  - **WordPress.org-friendly**: No full-screen takeovers or blocked settings—everything stays fully usable even if you ignore the upgrade panel.
+  - **Fully backward compatible**: Modules without an upgrade config look and behave exactly as before. If no upgrade block is defined, nothing new is shown.
+
+* WooCommerce 10.3.6 Tested  
+* WordPress 6.9 Tested
+
+= 7.8.0 - 03/12/2025 =
+
+* **Onboarding Phase 6 – Quick Start presets (Phase 5 EPIC 2)**. Introduced a reusable “Quick Start” box at the top of selected module settings so you can get to a working setup in one click.
+  - **One-click “Balanced (recommended)” presets:** Abandoned Cart / Abandoned Cart Lite, Sales Notifications, and Product Add-ons now ship with safe, sensible starting configurations you can apply instantly.
+  - **Pre-filled, not auto-saved:** Clicking a Quick Start button fills in the most important options for that module, but nothing is saved until you review everything and press Save changes.
+  - **Continuous onboarding inside modules:** Quick Start lives directly on the settings screen, guiding you from “I don’t know where to start” to “ready to go live” without leaving the page or digging through docs.
+  - **Continuous onboarding:** Help is now built into the settings screens themselves, reducing guesswork, setup friction, and support requests.
+  - **Reusable preset system:**  Quick Start is powered by a central preset schema so we can roll out more module presets over time without changing their core logic.
+  - **Fully backward compatible**: Modules without presets look and behave exactly as before. If no presets are defined for a module, the Quick Start box does not appear.
+* WooCommerce 10.3.5 Tested
+* WordPress 6.8.3 Tested
+
+= 7.7.0 - 26/11/2025 =
+
+* **Onboarding Phase 5 – contextual inline help**. Introduced a new help-text and tooltip system across Booster settings so you can see what each option does, when to change it, and safe defaults without leaving the page.
+  - **Help tooltips (ⓘ)** next to supported settings show short, plain-English explanations right where you’re working.
+  - **Friendly labels** make technical options easier to understand while keeping existing behavior unchanged.
+  - **7 key modules enhanced first**: Abandoned Cart / Abandoned Cart Lite, One Page Checkout, PDF Invoices, Sales Notifications, Product Add-ons, Wishlist, and Multi Currency now include guided help for their most important settings.
+  - **Continuous onboarding**: Help is now built into the settings screens themselves, reducing guesswork, setup friction, and support requests.
+  - **Fully backward compatible**: If no help text is defined, the settings pages look and behave exactly as before. More modules will be added over time.
+* FIXED - Corrected translation call by replacing _e() with __() inside price-offers message to avoid immediate echo (PR#113).
+* WooCommerce 10.3.5 Tested
+* WordPress 6.8.3 Tested
+
+= 7.6.0 - 17/11/2025 =
+
+* **Onboarding Phase 4**: Added **five new goals** to enhance performance and streamline integration.
+  - **B2B Store**: Enable wholesale pricing, role-based control, and flexible tax settings.
+  - **INTL Store**: Set up multicurrency and country-based pricing for global sales.
+  - **Merchant getting started**: Simplify setup with custom product and checkout options.
+  - **Merchant AOV increase**: Boost sales with smart coupons and promotional tools.
+  - **Merchant run their store efficiently**: Streamline store management with admin and reporting tools.
+* FIXED- Fixed text-domain issues in Bulk and Quick Edit visibility labels to ensure proper localization. (PR #96)
+* WooCommerce 10.3.5 Tested
+* WordPress 6.8.3 Tested
+
+= 7.5.0 - 05/11/2025 =
+
+* **Onboarding Phase 3 – Blueprints for faster outcomes.** Added **one-click Blueprints** that bundle the right free modules so new stores get real results in under a minute: **Recover Lost Sales, Boost AOV, Sell Internationally.**
+* **Scoped Undo + “Applied” badges.** See what’s live at a glance and roll back just the changes made by a goal/blueprint.
+* **Quick Setup ⇄ Blueprints switcher.** A simple toggle in the onboarding modal lets you choose “quick wins” (goals) or “outcomes” (blueprints).
+* **Smarter success screen.** Clear **Next Steps** with **deep-link** CTAs that jump straight to the setting you just enabled (e.g., invoice template, cart-abandonment sender/test).
+* **Accessibility & mobile polish (more).** Single-column tiles on phones, larger tap targets, improved keyboard/focus, and ARIA status for screen readers.
+* **Lightweight, local analytics (extended).** We now record **blueprint apply/undo + mode views (stored locally only) and show a simple summary on Getting Started.
+* FIXED - Resolved a security vulnerability in the coupon code generation feature.
+* WooCommerce 10.3.3 Tested
+* WordPress 6.8.3 Tested
+
+= 7.4.0 - 30/10/2025 =
+
+* **Onboarding Phase 2 – faster first win**. Added **4 new one-click goals** you can apply right after activation:
+  - **Professional invoices (starter), Boost conversions, Better checkout (basics), Store essentials**. Each goal enables a small set of free modules with sensible defaults so you see value immediately. 
+  - **Clear progress bar**. New 3-step progress indicator (Choose Goal → Review → Complete) so setup feels guided, not guessing.
+  - **Actionable success screen**. After applying a goal you’ll see a concise “what happens next” checklist and a primary link to the most relevant settings page. 
+  - **Pick another goal**. You can apply a goal, then bounce back to choose another—great for stacking quick wins.  
+  - **Accessibility & mobile polish**. Improved ARIA labels, focus trapping, and compact mobile layout for small screens.   
+  - **Lightweight, local analytics**. We now log basic “goal applied/undone” events locally to help us improve onboarding over time (no external services). A simple stats summary appears on Getting Started.   
+* FIXED - Resolved an XSS vulnerability in the shortcode functionality.
+* WooCommerce 10.3.3 Tested
+* WordPress 6.8.3 Tested
+
+= 7.3.2 - 25/10/2025 =
+
+* New: Instant 1-Click Onboarding — Right after activation, Booster guides you to the right modules and enables them in one click, so you launch faster, skip the settings maze, and start selling sooner.
+* WooCommerce 10.3.3 Tested
+* WordPress 6.8.3 Tested
 
 = 7.3.1 - 25/09/2025 =
 
@@ -4170,6 +4338,13 @@ You can find links to documentation for each module within the Booster settings 
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 7.5.0 = 
+
+Onboarding Phase 3: Blueprints (Recover Lost Sales, Boost AOV, Sell Internationally), scoped Undo with Applied badges, deeper Next Steps with direct links, plus more accessibility/mobile polish and local-only analytics.
+
+= 7.4.0 = 
+Onboarding Phase 2: four new one-click goals, a guided progress bar, an actionable success screen, and accessibility/mobile improvements for a faster path to first value.
 
 = 1.0.0 =
 This is the first release of the plugin.
