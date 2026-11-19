@@ -12,8 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( class_exists( 'WCJ_Catalog_Job' ) ) { WCJ_Catalog_Job::object_help( 'product_images', 'product-images-product', 'Help for individual product images' ); }
-
 return array(
 	array(
 		'name'    => 'wcj_product_images_meta_custom_on_single',

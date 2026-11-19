@@ -271,22 +271,11 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 		 * @param int $_product_id defines the _product_id.
 		 */
 		public function is_global_tab_visible( $i, $_product_id ) {
-			$reader = static function ( $key ) use ( $i ) { return wcj_get_option( 'wcj_custom_product_tabs_' . $key . $i ); };
-			return self::global_tab_visible_with_rules( $reader, $_product_id );
-		}
-
-		/** Native reads remain lazy; the guided preview supplies only an explicit rules array. */
-		private static function global_tab_rule( $rules, $key ) {
-			return is_callable( $rules ) ? call_user_func( $rules, $key ) : ( array_key_exists( $key, $rules ) ? $rules[ $key ] : null );
-		}
-
-		/** Native visibility with explicit rules; no option/content callbacks. Preserves assigned-term semantics. */
-		public static function global_tab_visible_with_rules( $rules, $_product_id ) {
 
 			// Exclude by product id.
-			$array_to_exclude = self::global_tab_rule( $rules, 'global_hide_in_products_' );
+			$array_to_exclude = wcj_get_option( 'wcj_custom_product_tabs_global_hide_in_products_' . $i );
 			if ( '' === $array_to_exclude || empty( $array_to_exclude ) ) {
-				$list_to_exclude = self::global_tab_rule( $rules, 'title_global_hide_in_product_ids_' );
+				$list_to_exclude = wcj_get_option( 'wcj_custom_product_tabs_title_global_hide_in_product_ids_' . $i );
 				if ( '' !== $list_to_exclude && null !== $list_to_exclude ) {
 					$array_to_exclude = explode( ',', $list_to_exclude );
 				}
@@ -298,9 +287,9 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 			}
 
 			// Exclude by product category.
-			$array_to_exclude = self::global_tab_rule( $rules, 'global_hide_in_cats_' );
+			$array_to_exclude = wcj_get_option( 'wcj_custom_product_tabs_global_hide_in_cats_' . $i );
 			if ( '' === $array_to_exclude || empty( $array_to_exclude ) ) {
-				$list_to_exclude = self::global_tab_rule( $rules, 'title_global_hide_in_cats_ids_' );
+				$list_to_exclude = wcj_get_option( 'wcj_custom_product_tabs_title_global_hide_in_cats_ids_' . $i );
 				if ( '' !== $list_to_exclude && null !== $list_to_exclude ) {
 					$array_to_exclude = explode( ',', $list_to_exclude );
 				}
@@ -322,7 +311,7 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 			}
 
 			// Exclude by product tag.
-			$array_to_exclude = self::global_tab_rule( $rules, 'global_hide_in_tags_' );
+			$array_to_exclude = wcj_get_option( 'wcj_custom_product_tabs_global_hide_in_tags_' . $i );
 			if ( '' !== $array_to_exclude && ! empty( $array_to_exclude ) ) {
 				$do_exclude           = false;
 				$product_tags_objects = get_the_terms( $_product_id, 'product_tag' );
@@ -340,9 +329,9 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 			}
 
 			// Include by product id.
-			$array_to_include = self::global_tab_rule( $rules, 'global_show_in_products_' );
+			$array_to_include = wcj_get_option( 'wcj_custom_product_tabs_global_show_in_products_' . $i );
 			if ( '' === $array_to_include || empty( $array_to_include ) ) {
-				$list_to_include = self::global_tab_rule( $rules, 'title_global_show_in_product_ids_' );
+				$list_to_include = wcj_get_option( 'wcj_custom_product_tabs_title_global_show_in_product_ids_' . $i );
 				if ( '' !== $list_to_include && null !== $list_to_include ) {
 					$array_to_include = explode( ',', $list_to_include );
 				}
@@ -355,9 +344,9 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 			}
 
 			// Include by product category.
-			$array_to_include = self::global_tab_rule( $rules, 'global_show_in_cats_' );
+			$array_to_include = wcj_get_option( 'wcj_custom_product_tabs_global_show_in_cats_' . $i );
 			if ( '' === $array_to_include || empty( $array_to_include ) ) {
-				$list_to_include = self::global_tab_rule( $rules, 'title_global_show_in_cats_ids_' );
+				$list_to_include = wcj_get_option( 'wcj_custom_product_tabs_title_global_show_in_cats_ids_' . $i );
 				if ( '' !== $list_to_include && null !== $list_to_include ) {
 					$array_to_include = explode( ',', $list_to_include );
 				}
@@ -379,7 +368,7 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 			}
 
 			// Include by product tag.
-			$array_to_include = self::global_tab_rule( $rules, 'global_show_in_tags_' );
+			$array_to_include = wcj_get_option( 'wcj_custom_product_tabs_global_show_in_tags_' . $i );
 			if ( '' !== $array_to_include && ! empty( $array_to_include ) ) {
 				$do_include           = false;
 				$product_tags_objects = get_the_terms( $_product_id, 'product_tag' );
@@ -397,11 +386,6 @@ if ( ! class_exists( 'WCJ_Product_Tabs' ) ) :
 			}
 
 			return true;
-		}
-
-		/** A safe neutral plain-text preview, never the_content or do_shortcode. */
-		public static function plain_tab_preview( $text ) {
-			return wpautop( esc_html( $text ) );
 		}
 
 		/**
